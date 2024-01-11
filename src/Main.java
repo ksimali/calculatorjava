@@ -12,11 +12,11 @@ public class Main {
 
         //Saisi du 1er nombre
         System.out.println("Saisir un premier nombre: ");
-        nombre1 = scanner.nextInt();
+        nombre1 = scanner.nextInt(); //initialisation de nombre1
 
         //Saisi du 2nd nombre
         System.out.println("Saisir un second nombre: ");
-        nombre2 = scanner.nextInt();
+        nombre2 = scanner.nextInt();//initialisation de nombre2
 
 
     }
