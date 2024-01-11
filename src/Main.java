@@ -1,4 +1,3 @@
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Main {
@@ -7,17 +6,41 @@ public class Main {
         //Création du scanner pour lire depuis le clavier
         Scanner scanner = new Scanner(System.in);
         // Declaration des variables
-        int nombre1, nombre2, addition, multiplication, soustraction, division;
-        String operation;
+        int nombre1, nombre2, addition, multiplication, soustraction;
+        double division;
 
         //Saisi du 1er nombre
         System.out.println("Saisir un premier nombre: ");
-        nombre1 = scanner.nextInt(); //initialisation de nombre1
+        nombre1 = scanner.nextInt();
 
         //Saisi du 2nd nombre
         System.out.println("Saisir un second nombre: ");
-        nombre2 = scanner.nextInt();//initialisation de nombre2
+        nombre2 = scanner.nextInt();
 
+        //Choix de l'opération
+        System.out.println("Choisissez l'opération (+, -, *, /): ");
+        char op = scanner.next().charAt(0); // recupère le caractère saisi par l'utilisateur
+        String operation = String.valueOf(op); // converti le caractère en chaine de caractère
+
+        //Traitement des opérations
+        switch(operation){
+            case "+" :
+                addition = nombre1 + nombre2;
+                System.out.println("Résultat: " + addition);
+                break;
+            case "-" :
+                soustraction = nombre1 - nombre2;
+                System.out.println("Résultat: " + soustraction);
+                break;
+            case "*" :
+                multiplication = nombre1 * nombre2;
+                System.out.println("Résultat: " + multiplication);
+                break;
+            case "/" :
+                division = (double)nombre1 / nombre2;
+                System.out.println("Résultat: "+ division);
+                break;
+        }
 
     }
 }
