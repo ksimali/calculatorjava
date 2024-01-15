@@ -1,12 +1,12 @@
 import java.util.Scanner;
-
 public class Main {
     public static void main(String[] args) {
 
         //Création du scanner pour lire depuis le clavier
         Scanner scanner = new Scanner(System.in);
         // Declaration des variables
-        double nombre1, nombre2, addition, multiplication, soustraction, division;
+        int nombre1, nombre2, addition, multiplication, soustraction;
+        double division;
 
         //Saisi du 1er nombre
         System.out.println("Saisir un premier nombre: ");
@@ -38,6 +38,9 @@ public class Main {
             case "/" :
                 division = nombre1 / nombre2;
                 System.out.println("Résultat: "+ division);
+                break;
+            default:
+                System.out.println("Choix d'opération incorrecte");
                 break;
         }
 
