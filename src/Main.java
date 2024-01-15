@@ -1,3 +1,4 @@
+import java.util.InputMismatchException;
 import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
@@ -5,15 +6,31 @@ public class Main {
         //Création du scanner pour lire depuis le clavier
         Scanner scanner = new Scanner(System.in);
         // Declaration des variables
-        double nombre1, nombre2, addition, multiplication, soustraction, division;
+        int nombre1, nombre2;
+        double addition, multiplication, soustraction, division;
 
         //Saisi du 1er nombre
-        System.out.println("Saisir un premier nombre: ");
-        nombre1 = scanner.nextInt(); // initialisation du nombre1
-
+        while(true){
+            try{
+                System.out.println("Saisir un premier nombre: ");
+                nombre1 = scanner.nextInt(); // initialisation du nombre1 av le nombre saisi
+                break; // stop the try catch if no error
+            }catch(InputMismatchException e){
+                System.out.println("Vous devez saisir un nombre entier!");
+            }
+            scanner.nextLine();// stop the while loop
+        }
         //Saisi du 2nd nombre
-        System.out.println("Saisir un second nombre: ");
-        nombre2 = scanner.nextInt(); // initialisation du nombre2
+        while(true){
+            try{
+                System.out.println("Saisir un second nombre: ");
+                nombre2 = scanner.nextInt(); // initialisation du nombre2
+                break;
+            }catch(InputMismatchException e){
+                System.out.println("Vous devez saisir un nombre entier!");
+            }
+            scanner.nextLine(); // arrête la boucle et passe a la ligne suivante
+        }
 
         //Choix de l'opération
         System.out.println("Choisissez l'opération (+, -, *, /): ");
