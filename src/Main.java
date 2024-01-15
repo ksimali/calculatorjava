@@ -52,9 +52,14 @@ public class Main {
                 System.out.println("Résultat: " + multiplication);
                 break;
             case "/" :
-                division = nombre1 / nombre2;
-                System.out.println("Résultat: "+ division);
-                break;
+                try{
+                    division = (double)nombre1 / nombre2;
+                    System.out.println("Résultat: "+ division);
+                    break;
+                }catch(ArithmeticException e){
+                    System.out.println(" Impossible de diviser par zéro!");
+                }
+                scanner.nextLine(); // arrête la boucle et passe a la ligne suivante
             default:
                 System.out.println("Choix d'opération incorrecte");
                 break;
