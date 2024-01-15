@@ -5,8 +5,7 @@ public class Main {
         //Création du scanner pour lire depuis le clavier
         Scanner scanner = new Scanner(System.in);
         // Declaration des variables
-        int nombre1, nombre2, addition, multiplication, soustraction;
-        double division;
+        double nombre1, nombre2, addition, multiplication, soustraction, division;
 
         //Saisi du 1er nombre
         System.out.println("Saisir un premier nombre: ");
